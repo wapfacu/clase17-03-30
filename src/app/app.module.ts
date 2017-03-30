@@ -12,8 +12,12 @@ import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-en
 
 //Codigo agregado
 import {RouterModule,Routes} from'@angular/router';
-const rutasDeNavegacion: Routes = [{path: 'login', component: LoginComponent}];
-//Final codigo editado
+const rutasDeNavegacion: Routes = [{path: 'login', component: LoginComponent},
+                                   {path: '',redirectTo :'/login' , pathMatch:'full'},
+                                   {path: '**', component: PaginaNoEncontradaComponent}];
+
+ 
+
 
 @NgModule({
   declarations: [
